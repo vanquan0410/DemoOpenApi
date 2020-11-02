@@ -1,0 +1,33 @@
+﻿
+.content-body .toolbar {
+    width: calc(100% - 2px);
+    height: 30px;
+    background-color: rgb(239,239,239);
+    display: flex;
+    
+}
+
+.toolbar {
+    display: flex;
+    width: calc(100% - 4px);
+    height: 25px;
+    border-bottom: 1px solid #a9a9a9;
+    background: #ededed;
+}
+
+    .toolbar button {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border-radius: unset;
+        border-style: solid;
+        border-width: 1px;
+        border-color: transparent;
+        font-size: 15px;
+    }
+
+        .toolbar button:hover {
+            border-color: #1e32d0;
+            background-color: #ffffff;
+            cursor: pointer;
+        }

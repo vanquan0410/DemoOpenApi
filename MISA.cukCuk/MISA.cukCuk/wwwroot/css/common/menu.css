@@ -1,0 +1,137 @@
+﻿/* phan menu */
+.sidebar .menu {
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: #0973b9;
+    overflow-y:scroll;
+}
+
+.menu .menu-item {
+    display: flex;
+    width: 97%;
+    border-top: 1px solid #5fb0e6;
+    border-bottom: 1px solid #063858;
+    height: 40px;
+    padding-left: 5px;
+}
+/*menu icon*/
+.menu .menu-item-icon {
+    width: 19px;
+    height: 17px;
+    background-image: url('/content/img/images/iconMenu.png');
+    background-repeat: no-repeat;
+    align-self: center;
+    margin-left: 5px;
+    background-position-x: -6px;
+}
+
+.menu-item .overview-icon {
+    background-position-y: -6px;
+}
+
+.menu-item .report-icon {
+    background-position-y: -194px;
+    background-position-x:-3px !important;
+    height:22px;
+}
+
+.menu-item .purchase-icon {
+    background-position-y: -380px;
+    background-position-x: -4px;
+    width: 20px;
+    height: 17px;
+}
+
+.menu-item .warehouse-icon {
+    background-position-y: -44px;
+}
+
+.menu-item .cash-fund-icon {
+    background-position-y: -80.5px;
+    height: 20px;
+}
+
+.menu-item .deposit-funds-icon {
+    background-position-y: 0px;
+    background-position-x: 1px;
+    background-image:url('/content/img/images/icon-deposit.png');
+}
+
+.menu-item .cost-icon {
+    background-position-y: -502px;
+}
+
+.menu-item .promotion-icon {
+    height: 25px;
+    background-position-y: -118px;
+    background-position-x: -4px !important;
+}
+.menu-item .menu-icon {
+    background-image: url('/content/img/images/vector-smart-object.png');
+    width: 20px;
+    height: 22px;
+    background-position-x: 0px;
+    background-position-y: -1px;
+}
+.menu-item .cacel-bill-icon {
+    background-image: url(/content/img/images/cancel-invoice.png);
+    background-repeat: no-repeat;
+    background-position-y: 3px;
+    background-position-x: 0px;
+    width: 20px;
+    height: 28px;
+}
+.menu .category-icon {
+    background-image: url('/content/img/images/icon-left-header.png');
+    background-repeat: no-repeat;
+    background-position-y: -2px;
+    background-position-x: -1px;
+}
+.menu-item .setting-system-icon {
+    background-position-y: -236px;
+    background-position-x: -4px !important;
+    width: 21px;
+    height: 19px;
+
+}
+.menu-item .help-icon {
+    background-image: url(/content/img/images/iconHelp.png);
+    background-repeat: no-repeat;
+    background-position-y: 0px;
+    background-position-x: 0px;
+    width: 23px;
+    height: 23px;
+}
+.menu-item .drop-help-icon {
+    background-position-y: -274px;
+    margin-left: 70px;
+}
+.menu-item .phone-icon {
+    background-image: url('/content/img/images/icon-subscriber.png');
+    background-repeat: no-repeat;
+    background-position-y: -1px;
+    background-position-x: -3px
+}
+/*menu text*/
+.menu .menu-item:hover{
+    cursor: pointer;
+    
+}
+.menu .menu-item-text {
+    color: #ffffff;
+    align-self: center;
+    margin-left: 12px;
+    text-decoration:none;
+}
+.menu .menu-item:hover {
+    background-color: #ff6a00;
+    cursor: pointer;
+}
+
+.sidebar .menu::-webkit-scrollbar{
+    width: 0px;
+    /* background-color: darkgray; */
+}
+.menu-item a{
+    text-decoration:none;
+}

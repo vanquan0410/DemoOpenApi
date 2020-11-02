@@ -1,0 +1,126 @@
+openapi: 3.0.0
+info:
+  title: Employees
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /employees:
+    # lấy danh sách nhaanv viên CreatedBy: DVQuan
+    get:
+      summary: lấy danh sách nhân viên
+      description: lấy danh sách nhân viên
+      tags:
+        - EmployeeInfo
+      responses:
+        '200':
+          description: trả dữu liệu thành công
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseResult'
+              examples:
+                200Get10Employees:
+                  $ref: models/examples/EmployeeExamples.v1.yaml#/components/examples/200Get10Employees
+        '400':
+          $ref: '#/components/responses/400'
+        '500':
+          $ref: '#/components/responses/500'
+      operationId: get-employees
+
+    #thêm nhân viên  CreatedBy: DVQuan
+    post:
+      summary: thêm nhân viên
+      tags:
+        - EmployeeInfo
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResponseResult'
+      responses:
+        '201':
+          description: thêm thành công.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseResult'
+              examples:
+                200UpdateExchangeRate:
+                  $ref: models/examples/ResponseResultExamples.v1.yaml#/components/examples/200UpdateExchangeRate
+        '400':
+          $ref: '#/components/responses/400'
+        '500':
+          $ref: '#/components/responses/500'
+
+    put:
+      summary: sửa nhân viên
+      tags:
+        - EmployeeInfo
+      parameters:
+        - name: EmployeeId
+          in: query
+          required: true
+          description: ID người dùng
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResponseResult'
+      responses:
+        '200':
+          description: cập nhật thành công.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseResult'
+              examples:
+                200UpdateExchangeRate:
+                  $ref: models/examples/ResponseResultExamples.v1.yaml#/components/examples/200UpdateExchangeRate
+        '400':
+          $ref: '#/components/responses/400'
+        '500':
+          $ref: '#/components/responses/500'
+
+  # xóa nhân vien CreatedBy: DVQuan
+    delete:
+      summary: xóa nhân viên
+      tags:
+        - EmployeeInfo
+      parameters:
+        - name: userID
+          in: query
+          required: true
+          description: ID người dùng
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Xóa nhân viên.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseResult'
+              examples:
+                200InitializeLanguage:
+                  value:
+                    notify: OK
+        '400':
+          $ref: '#/components/responses/400'
+        '500':
+          $ref: '#/components/responses/500'
+
+components:
+  schemas:
+    ResponseResult:
+      $ref: models/Employee.v1.yaml
+
+  responses:
+    '400':
+      $ref: ../common/models/responses.v1.yaml#/components/responses/400
+    '500':
+      $ref: ../common/models/responses.v1.yaml#/components/responses/500

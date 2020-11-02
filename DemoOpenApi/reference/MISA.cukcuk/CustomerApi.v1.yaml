@@ -1,0 +1,168 @@
+openapi: 3.0.0
+info:
+  title: CustomerApi
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /customers:
+    get:
+      summary: lấy danh sách khách hàng
+      description: lấy danh sách khách hàng
+      tags:
+        - CustomerInfo
+      responses:
+        '200':
+          description: trả dữu liệu thành công
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseResult'
+              examples:
+                200Get10Customers:
+                  $ref: models/examples/CustomerExamples.v1.yaml#/components/examples/200Get10Customers
+                200Get5Customers:
+                  $ref: models/examples/CustomerExamples.v1.yaml#/components/examples/200Get5Customers
+        '400':
+          $ref: '#/components/responses/400'
+        '500':
+          $ref: '#/components/responses/500'
+      operationId: get-customers
+    post:
+      summary: thêm khách hàng
+      tags:
+        - CustomerInfo
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResponseResult'
+      responses:
+        '201':
+          description: thêm thành công.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseResult'
+              examples:
+                200UpdateExchangeRate:
+                  $ref: models/examples/ResponseResultExamples.v1.yaml#/components/examples/200UpdateExchangeRate
+        '400':
+          $ref: '#/components/responses/400'
+        '500':
+          $ref: '#/components/responses/500'
+    put:
+      summary: sửa thong tin khach hang
+      tags:
+        - CustomerInfo
+      parameters:
+        - name: EmployeeId
+          in: query
+          required: true
+          description: ID người dùng
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResponseResult'
+      responses:
+        '200':
+          description: cập nhật thành công.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseResult'
+              examples:
+                200UpdateExchangeRate:
+                  $ref: models/examples/ResponseResultExamples.v1.yaml#/components/examples/200UpdateExchangeRate
+        '400':
+          $ref: '#/components/responses/400'
+        '500':
+          $ref: '#/components/responses/500'
+    
+    # xóa khách hàng
+    delete:
+      summary: xóa khách hàng
+      tags:
+        - CustomerInfo
+      parameters:
+        - name: CustomerId
+          in: query
+          required: true
+          description: ID người dùng
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Xóa khách hàng.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseResult'
+              examples:
+                200InitializeLanguage:
+                  value:
+                    notify: OK
+        '400':
+          $ref: '#/components/responses/400'
+        '500':
+          $ref: '#/components/responses/500'
+    parameters: []
+  '/customer/{customerid}':
+    parameters:
+      - schema:
+          type: string
+        name: customerid
+        in: path
+        required: true
+    get:
+      summary: lấy thông tin khác hàng theo ID
+      tags:
+        - CustomerInfo
+      responses:
+        '200':
+          description: trả dữu liệu thành công
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseResult'
+              examples:
+                200GetCustomerById:
+                  $ref: models/examples/CustomerExamples.v1.yaml#/components/examples/200GetCustomerById
+        '400':
+          $ref: '#/components/responses/400'
+        '500':
+          $ref: '#/components/responses/500'
+      operationId: get-customer-customerid
+  /countpages:
+    get:
+      summary: lấy số lượng bản ghi khách hàng
+      tags:
+        - CustomerInfo
+      responses:
+        '200':
+          description: trả dữu liệu thành công
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponsePage'
+              examples:
+                ResponsePage:
+                  $ref: models/examples/ResponsePageExample.v1.yaml#/components/examples/ResponsePage
+      operationId: get-countpage
+    parameters: []
+components:
+  schemas:
+    ResponseResult:
+      $ref: models/Customer.v1.yaml
+    ResponsePage:
+      $ref: models/CountPage.v1.yaml
+  responses:
+    '400':
+      $ref: ../common/models/responses.v1.yaml#/components/responses/400
+    '500':
+      $ref: ../common/models/responses.v1.yaml#/components/responses/500

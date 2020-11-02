@@ -1,0 +1,98 @@
+﻿.tblistemployee #titleCode{
+    width:7%;
+}
+.tblistemployee #titleName{
+    width:12%
+}
+.tblistemployee #titleGender{
+    width:3%;
+}
+.tblistemployee #titleDateOfBirth{
+    width:8%;
+}
+.tblistemployee #titlePhone{
+    width:8%;
+}
+.tblistemployee #titleEmail{
+    width:13%;
+}
+.tblistemployee #titleDepartmentName{
+    width:10%;
+}
+.tblistemployee #titleMoney{
+    width:10%;
+}
+.tblistemployee #titleWorkStatus{
+    width:10%;
+}
+.tblistemployee #titlePosition {
+    width: 10%;
+}
+.dialog-modal .form-dialog {
+    width: 640px;
+}
+.dialog-footer .dialog-footer-right {
+    margin-left: 188.7px;
+}
+.dialog-in #txtDepartmentName {
+    width: 98.6%;
+}
+.dialog-in #txtEmail, #txtEmployeeName {
+    width: 96.3%;
+}
+.dialog-body input { 
+    width: 96%; 
+}
+td #txtCompanyName {
+    width: 98.7%;
+}
+
+td #txtNote {
+    width: 98.2%;
+}
+td select {
+   
+    width: 98%;
+}
+.avatar-box {
+    position: relative;
+    width: 131px;
+    height: 80%;
+    border: 1px solid #ccc;
+    background-image: url('/content/img/Images/avatardefault.png');
+    background-position-y: -8px;
+    background-position-x: center;
+}
+
+    .avatar-box .btn-select-avatar {
+        position: absolute;
+        bottom: 8px;
+        left: 24px;
+    }
+
+    .avatar-box .btn-remove-avatar {
+        position: absolute;
+        bottom: 8px;
+        right: 24px;
+        background-image: url('/content/img/Images/cance.png');
+        background-repeat: no-repeat;
+        background-position: 7px;
+    }
+
+    .avatar-box .ct-btn-avatar {
+        min-width: 35px !important;
+        height: 22px;
+        line-height: 7px;
+    }
+
+        .avatar-box .ct-btn-avatar .btn-remove-avatar {
+            color: #f00;
+        }
+.tb-right-top {
+    
+    padding-top: 2px;
+}
+.tb-right-butoom {
+    
+    padding-top: 2px;
+}

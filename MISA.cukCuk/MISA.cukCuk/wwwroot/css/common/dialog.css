@@ -1,0 +1,237 @@
+﻿/* phan dialog */
+.dialog-modal {
+    /* display: none;*/
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #8080806e;
+    opacity: 1;
+}
+
+.form-dialog {
+    /* display: none;*/
+    display: none;
+    position: absolute;
+    border: 5px solid #0973b9;
+    border-radius: 3px;
+    width: 654px;
+    height: 390px;
+    background-color: #fff;
+    top: calc(50% - 200px);
+    left: calc(50% - 300px);
+    right: 0;
+    bottom: 0;
+}
+    .form-dialog .dialog-titlebar {
+        width: 100.5%;
+        height: 27px;
+        background-color: #0973b9;
+        display: flex;
+        color: #ffffff;
+        margin-left: -2px;
+    }
+.dialog-titlebar .dialog-titlebar-text {
+    align-self: center;
+    padding: 5px;
+}
+.dialog-titlebar .dialog-titlebar-icon {
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/content/img/images/cancel.png');
+    margin-left: 545px;
+    align-self: center;
+}
+.dialog-titlebar-icon:hover{
+    cursor:pointer;
+    background-color:#0973b9;   
+}
+/*dialog body*/
+.form-dialog .dialog-content {
+    width: 98.3%;
+    height: calc(100% - 60px);
+    padding: 9px;
+    padding-top: 5px;
+}
+    .dialog-content .dialog-body{
+       
+        width:100%;
+        height:calc(100% - 35px);
+        background-color:#ffffff;
+    }
+    .dialog-body .dialog-information{
+        border-bottom:0px;
+    }
+   
+.dialog-body table {
+    width: 100%;
+    height: 100%;
+    border-right: 0px;
+}
+.dialog-informaton tbody tr {
+    width: 100px;
+    height: 40px;
+}
+.lable{
+    width: 20%;
+  
+}
+input{
+    outline: 1px;
+    
+}
+input:focus{
+     outline: 0px; 
+    border: 1px solid #0973b9;
+}
+.dialog-in textarea:focus{
+    outline: 0px; 
+    border: 1px solid #0973b9;
+    border-radius: 0%;
+}
+td input{
+    height: 20px;
+    width: 80%;
+}
+.dialog-in #txtCustomerName,#txtEmail{
+    width: 95%;
+}
+td input[type="date" i]{
+    height: 22px;
+    text-align:right;
+}
+td select {
+    border:1px solid #ccc;
+    height: 25px;
+    width: 82%;
+}
+select:focus{
+    outline: 0px; 
+    border: 1px solid #0973b9;
+    border-radius: 0%;
+}
+.dialog-in #sel-card{
+    width: 97%;
+}
+td #txtCompanyName,#txtAddress{
+    width:98.3%;
+}
+td #txtNote{
+    border:1px solid #ccc;
+    width: 97.9%;
+}
+td #txtNote:focus{
+    border:1px solid #0973b9;
+    
+}
+input[type="text" i] {
+    padding: 1px 2px;
+}
+.dialog-body input{
+    border:1px solid #ccc;
+    height: 19px;
+    width: 80%;
+    padding: 0px;
+    outline: none;
+    padding: 1px 1px;
+   
+}
+.dialog-body input:focus{
+   border-radius:0% ;
+   padding: 1px 1px;
+   border-color: #0973b9;
+}
+.dialog-body .dialog-in{
+    height: 15px;
+}
+/*dialog footer*/
+.dialog-content .dialog-footer {
+    height: 35px;
+    display: flex;
+    background-color: #ffffff;
+    padding-top: 23px;
+    
+}
+.dialog-footer .dialog-button {
+    margin: 5px;
+    height: 25px !important;
+}
+#dialog-btnAdd {
+    width: 78px;
+    height: 20px; 
+    background-image: url('/content/img/images/diskette.png');
+    background-repeat:no-repeat ;
+    background-position-x: 3px;
+    background-position-y: 3px;
+}
+#dialog-btnEdit {
+    width: 130px;
+    height: 20px; 
+    background-image: url('/content/img/images/add.png');
+    background-repeat:no-repeat ;
+    background-position-x: 3px;
+    background-position-y: 3px;
+}
+#dialog-btnCancel {
+    width: 100px;
+    height: 20px; 
+    background-image: url('/content/img/images/cance.png');
+    background-repeat:no-repeat ;
+    background-position-x: 3px;
+    background-position-y: 3px;
+}
+
+#dialog-btnHelp{
+    width: 88px;
+    height: 20px; 
+    margin-left: 0px;
+    background-image: url('/content/img/images/iconHelp.png');
+    background-repeat:no-repeat ;
+    background-position-x: 3px;
+    background-position-y: 1px;
+
+}
+.dialog-footer  button {
+    border-radius: unset;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #1614142b;
+}
+    .dialog-footer button:hover {
+        border-color: #0973b9;
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+    .dialog-footer button:focus {
+        border-color: #0973b9 !important;
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+    .dialog-footer .dialog-footer-left{
+
+    }
+    .dialog-footer .dialog-footer-right{
+        margin-left: 199px;
+    }
+.dialog-body .required-error{
+    border:1px solid #ff0000;
+    padding: 1px 1px !important;
+}
+.dialog-modal .dialog-employee {
+    height: 520px;
+    width: 720px !important;
+}
+/*.form-dialog {
+   
+    overflow: auto;
+    resize: both;
+    width: 400px;
+}
+.sidebar .form-dialog::-webkit-scrollbar {
+    width: 0px;*/
+     /*background-color: darkgray; */
+/*}*/
