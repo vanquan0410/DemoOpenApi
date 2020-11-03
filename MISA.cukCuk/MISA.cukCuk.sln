@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MISA.cukCuk", "MISA.cukCuk\MISA.cukCuk.csproj", "{61EED6CE-BB36-453D-AC35-9E256128C37A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISA.Data", "MISA.Data\MISA.Data.csproj", "{3E6103B5-1D4E-4AE3-B57F-FBDEEB626BE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MISA.Data", "MISA.Data\MISA.Data.csproj", "{3E6103B5-1D4E-4AE3-B57F-FBDEEB626BE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISA.Service", "MISA.Service\MISA.Service.csproj", "{E6320A26-C67A-4BD5-B398-82EA8921B84E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MISA.Service", "MISA.Service\MISA.Service.csproj", "{E6320A26-C67A-4BD5-B398-82EA8921B84E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISA.Model", "MISA.Model\MISA.Model.csproj", "{6AF31747-8AE6-425E-B365-20699262159A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MISA.Model", "MISA.Model\MISA.Model.csproj", "{6AF31747-8AE6-425E-B365-20699262159A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISA.TestUnit.Test", "MISA.TestUnit.Test\MISA.TestUnit.Test.csproj", "{EAEE6934-4B92-4F6F-937D-B5E64DAA289F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6AF31747-8AE6-425E-B365-20699262159A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AF31747-8AE6-425E-B365-20699262159A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AF31747-8AE6-425E-B365-20699262159A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAEE6934-4B92-4F6F-937D-B5E64DAA289F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAEE6934-4B92-4F6F-937D-B5E64DAA289F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAEE6934-4B92-4F6F-937D-B5E64DAA289F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAEE6934-4B92-4F6F-937D-B5E64DAA289F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

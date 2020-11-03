@@ -23,15 +23,21 @@ namespace MISA.Model
         /// <summary>
         /// tên nhân viên
         /// </summary>
-        public String EmployeeName { get; set; } 
+        public String EmployeeName { get; set; }
 
         /// <summary>
         /// loại giới tính
+        ///  0-nam
+        /// 1-nữ
+        /// 2-khác
         /// </summary>
         public int? Gender { get; set; }
 
         /// <summary>
         /// giới tính
+        /// 0-nam
+        /// 1-nữ
+        /// 2-khác
         /// </summary>
         public String GenderName
         {
@@ -84,11 +90,15 @@ namespace MISA.Model
 
         /// <summary>
         /// loại tình trạng công việc
+        /// 0-đang làm việc
+        /// 1-nghỉ việc
         /// </summary>
         public int? WorkStatus { get; set; }
 
         /// <summary>
         /// tên tình trạng công việc
+        /// 0-đang làm việc
+        /// 1-nghỉ việc
         /// </summary>
         public String WorkStatusName
         {

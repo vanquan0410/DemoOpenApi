@@ -5,7 +5,9 @@ info:
 servers:
   - url: 'http://localhost:3000'
 paths:
+  # API xử lý khách hàng CreatedBy: DVQuan
   /customers:
+    # lấy danh sách khách hàng
     get:
       summary: lấy danh sách khách hàng
       description: lấy danh sách khách hàng
@@ -28,6 +30,8 @@ paths:
         '500':
           $ref: '#/components/responses/500'
       operationId: get-customers
+
+    # Thêm khách hàng
     post:
       summary: thêm khách hàng
       tags:
@@ -51,6 +55,8 @@ paths:
           $ref: '#/components/responses/400'
         '500':
           $ref: '#/components/responses/500'
+
+    #Sửa khách hàng
     put:
       summary: sửa thong tin khach hang
       tags:
@@ -112,7 +118,9 @@ paths:
         '500':
           $ref: '#/components/responses/500'
     parameters: []
-  '/customer/{customerid}':
+
+    #lấy thông tin khách hàng theo id
+  '/customers/{customerid}':
     parameters:
       - schema:
           type: string
@@ -138,6 +146,8 @@ paths:
         '500':
           $ref: '#/components/responses/500'
       operationId: get-customer-customerid
+
+  # lấy số lượng khách hàng CreatedBy: DVQuan
   /countpages:
     get:
       summary: lấy số lượng bản ghi khách hàng

@@ -5,8 +5,9 @@ info:
 servers:
   - url: 'http://localhost:3000'
 paths:
+  # API xử lý nhân viên
   /employees:
-    # lấy danh sách nhaanv viên CreatedBy: DVQuan
+    # lấy danh sách nhân viên CreatedBy: DVQuan
     get:
       summary: lấy danh sách nhân viên
       description: lấy danh sách nhân viên
@@ -28,7 +29,7 @@ paths:
           $ref: '#/components/responses/500'
       operationId: get-employees
 
-    #thêm nhân viên  CreatedBy: DVQuan
+    # thêm nhân viên  CreatedBy: DVQuan
     post:
       summary: thêm nhân viên
       tags:
@@ -52,7 +53,7 @@ paths:
           $ref: '#/components/responses/400'
         '500':
           $ref: '#/components/responses/500'
-
+    # sửa nhân viên
     put:
       summary: sửa nhân viên
       tags:

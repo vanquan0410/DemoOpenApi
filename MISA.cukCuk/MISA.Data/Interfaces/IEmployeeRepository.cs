@@ -10,8 +10,8 @@ namespace MISA.Data.Interfaces
         /// <summary>
         /// kiem tra trung item
         /// </summary>
-        /// <param name="value"></param> object value
-        /// <returns></returns> EmolyeeCode
+        /// <param name="value">object value</param> 
+        /// <returns>object</returns> 
         Employee checkItem(Object value);
     }
 }

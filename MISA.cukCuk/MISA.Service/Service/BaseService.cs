@@ -20,11 +20,19 @@ namespace MISA.Service.Service
         #region method
         public bool Delete(T value)
         {
+            if (value ==null)
+            {
+                return false;
+            }
            return _baseRepository.Delete(value);
         }
 
         public IEnumerable<T> Get(int page, int size)
         {
+            if (page == 0 && size == 0)
+            {
+                return _baseRepository.GetAllData();
+            }
             return _baseRepository.Get(page, size);
         }
 

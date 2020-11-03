@@ -24,6 +24,10 @@ namespace MISA.Data.Repository
 
         public IEnumerable<T> Get(int page, int size)
         {
+            /*if (page == 0 && size == 0)
+            {
+                return GetAllData();
+            }*/
             return _dataContext.Get(page, size);
         }
 

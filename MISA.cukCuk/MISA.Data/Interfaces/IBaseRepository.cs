@@ -44,7 +44,7 @@ namespace MISA.Data.Interfaces
         /// sửa 
         /// </summary>
         /// <param name="value"></param> T value
-        /// <returns></returns> true or false
+        /// <returns> true(update thành công) or false(update thất bại)</returns>
         ///  CreatedBy: DVQuan(14/10/2020)
         bool Update(T value);
 
@@ -53,7 +53,7 @@ namespace MISA.Data.Interfaces
         /// xóa
         /// </summary>
         /// <param name="value">T value</param> 
-        /// <returns></returns> true or flase
+        /// <returns>true(xóa thành công) or flase(xóa thất cại)</returns> 
         ///  CreatedBy: DVQuan(14/10/2020)
         bool Delete(T value);
 
@@ -61,14 +61,14 @@ namespace MISA.Data.Interfaces
         /// <summary>
         /// lấy số lượng danh sách các bản ghi
         /// </summary>
-        /// <returns></returns> tổng số bản ghi
+        /// <returns>tổng số bản ghi</returns> 
         /// CreatedBy: DVQuan
         int GetCountData();
 
         /// <summary>
         /// lấy Code của item lớn nhất
         /// </summary>
-        /// <returns></returns> Item code
+        /// <returns>Item code</returns> 
         String GetMaxItemCode();
     }
 
